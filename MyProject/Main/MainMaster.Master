@@ -1,0 +1,88 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MainMaster.master.cs" Inherits="Main.MainMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <style>
+        .logoSize {
+            width: 60px;
+            height: 80px;
+        }
+        .navbar-toggler {
+          top: .25rem;
+          right: 1rem;
+        }
+        .navFortSize{
+            font-size:1.2em;
+        }
+        .navImg{
+            vertical-align:text-bottom;
+            width:24px;
+            height:24px;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <%--align-items-start bg-secondary text-white float-left  --%>
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header class="container-fluid bg-dark">
+            <div class="row flex-md-nowrap">
+                <div class="col-md-2 p-md-3 p-2 navbar navbar-dark justify-content-center">
+                    <a href="#"><img src="images/logo-3.png" width="100" height="30"/></a>
+                    <button class="navbar-toggler position-absolute d-md-none" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="col-md-7 text-center text-md-left p-md-3">
+                    <asp:Label ID="lbPageName" runat="server" Text="Label" CssClass="text-white h3 pl-2"></asp:Label>
+                </div>
+                <div class="col-md-3 text-right p-md-3 p-2">
+                    <asp:Label ID="lbAccountName" runat="server" Text="Label" CssClass="text-white pr-3 h6"></asp:Label>
+                    <asp:Button ID="Button1" runat="server" Text="Logout" />
+                </div>
+            </div>
+        </header>
+        <%--col-md-2 d-md-block bg-light --%>
+        <div class="container-fluid">
+            <div class="row">
+                <div id="sidebarMenu" class="collapse col-md-2 d-md-block bg-light pt-3" style="min-height:100vh">
+                    <ul class="navbar-nav ms-auto">
+                      <li class="nav-item m-2">
+                        <a class="nav-link text-dark badge badge-light navFortSize" href="#"><img class="navImg mr-2" src="icons/cash.svg"/>現金日記帳</a>
+                      </li>
+                      <li class="nav-item m-2">
+                        <a class="nav-link text-dark badge badge-light navFortSize" href="#"><img class="navImg mr-2" src="icons/wallet.svg"/>零用金表</a>
+                      </li>
+                      <li class="nav-item m-2">
+                        <a class="nav-link text-dark badge badge-light navFortSize dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="navImg mr-2" src="icons/card-list.svg"/>稅務資料</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <a class="dropdown-item" href="#">發票清單</a>
+                          <a class="dropdown-item" href="#">進項稅額</a>
+                          <a class="dropdown-item" href="#">銷項稅額</a>
+                        </div>
+                      </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-10 p-md-4 p-2">
+                    <%--<div class="table-responsive">--%>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <%--</div>--%>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
