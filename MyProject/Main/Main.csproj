@@ -73,6 +73,7 @@
     <Content Include="images\logo-3.png" />
     <Content Include="images\MenuList.png" />
     <Content Include="images\w3c.jpg" />
+    <Content Include="ReceiptDetail.aspx" />
     <Content Include="ReceiptList.aspx" />
     <Content Include="js\bootstrap.bundle.min.js" />
     <Content Include="js\jquery-3.6.0.min.js" />
@@ -90,6 +91,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ReceiptDetail.aspx.cs">
+      <DependentUpon>ReceiptDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReceiptDetail.aspx.designer.cs">
+      <DependentUpon>ReceiptDetail.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReceiptList.aspx.cs">
       <DependentUpon>ReceiptList.aspx</DependentUpon>

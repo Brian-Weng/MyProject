@@ -12,6 +12,11 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery UI -->
+    <link rel="stylesheet" href="Scripts/jquery-ui-1.12.1/jquery-ui.min.css" />
+    <script src="Scripts/jquery.js"></script>
+    <script src="Scripts/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <!-- CSS -->
     <style>
         .logoSize {
             width: 60px;
